@@ -1,0 +1,28 @@
+<div class="container">
+  <h3>何をしたい？</h3>
+  <div class="row">
+    <div class="col-md-3">
+      <form ng-submit="want_do()">
+	<input type="text" name="do"  id="do" ng-model="doto" value="やりたいこと！"  /><br>
+	<input type="submit" class="button" id="create_Do" value="Do" />
+      </form>
+    </div>
+    <div class="col-md-9">
+      <ul ng-repeat="do in dotolist | orderByPriority">
+	<li>{{do.text}}</li>
+	<span>
+	  UserID:{{do.userID}}と
+	  <a href ng-click="play(do.$id)">一緒にやろう！</a>|
+	  <a href ng-click="good()">おうえん！</a>
+	  <ul ng-repeat="t in do|filter:ageFilter(criteria)">
+	    {{t}}
+	  </ul>
+	</span>
+      </ul>
+    </div>
+    <a href ng-click="test2()">Click</a>
+  </div>
+  
+  
+  
+</div>

@@ -1,0 +1,22 @@
+<div class="container">
+  {{title}}
+  {{uesrs}}
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Signup</h3>
+      <form ng-submit="create_user()">
+	<input type="text" name="name" class="username" id="name" ng-model="name" placeholder="名前いれてね！" value="DefaultEmail"  /><br>
+	<input type="text" name="passwd" class="passwd" id="passwd" ng-model="passwd" placeholder="ぱすわーどいれて" value="DefaultPasswd" /><br>
+	<input type="submit" class="button" id="create_button" value="Signup" />
+      </form>
+    </div>
+    <div class="col-md-6">
+      <h3>Login</h3>
+      <form ng-submit="login()">
+	<input type="text" name="name" class="username" id="name" ng-model="name" placeholder="名前いれてね！" value="DefaultEmail"  /><br>
+	<input type="text" name="passwd" class="passwd" id="passwd" ng-model="passwd" placeholder="ぱすわーどいれて" value="DefaultPasswd" /><br>
+	<input type="submit" class="button" id="create_button" value="Login" />
+      </form>
+    </div>
+  </div>
+</div>
